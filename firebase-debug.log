@@ -1,0 +1,53 @@
+[debug] [2025-12-21T12:31:10.516Z] ----------------------------------------------------------------------
+[debug] [2025-12-21T12:31:10.518Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\PRATHMESH KADAM\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init functions
+[debug] [2025-12-21T12:31:10.518Z] CLI Version:   15.1.0
+[debug] [2025-12-21T12:31:10.518Z] Platform:      win32
+[debug] [2025-12-21T12:31:10.518Z] Node Version:  v22.20.0
+[debug] [2025-12-21T12:31:10.519Z] Time:          Sun Dec 21 2025 18:01:10 GMT+0530 (India Standard Time)
+[debug] [2025-12-21T12:31:10.519Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\PRATHMESH KADAM\OneDrive\Desktop\New folder
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-12-21T12:31:35.966Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-21T12:31:35.967Z] > authorizing via signed-in user (luminary.web24@gmail.com)
+[debug] [2025-12-21T12:31:54.232Z] Checked if tokens are valid: true, expires at: 1766323857412
+[debug] [2025-12-21T12:31:54.233Z] Checked if tokens are valid: true, expires at: 1766323857412
+[debug] [2025-12-21T12:31:54.235Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-12-21T12:31:54.235Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"LuminaryAuth"}
+[debug] [2025-12-21T12:31:54.907Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2025-12-21T12:31:54.907Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"luminaryauth"}
+[debug] [2025-12-21T12:32:10.510Z] Checked if tokens are valid: true, expires at: 1766323857412
+[debug] [2025-12-21T12:32:10.511Z] Checked if tokens are valid: true, expires at: 1766323857412
+[debug] [2025-12-21T12:32:10.511Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-12-21T12:32:10.511Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"LuminaryAuth_01"}
+[debug] [2025-12-21T12:32:10.697Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 400
+[debug] [2025-12-21T12:32:10.697Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"error":{"code":400,"message":"Request contains an invalid argument.","status":"INVALID_ARGUMENT"}}
+[debug] [2025-12-21T12:32:10.698Z] Couldn't check if project ID LuminaryAuth_01 is available. Original error: FirebaseError: Failed to check if project ID is available. See firebase-debug.log for more info.
+[debug] [2025-12-21T12:32:21.085Z] Checked if tokens are valid: true, expires at: 1766323857412
+[debug] [2025-12-21T12:32:21.085Z] Checked if tokens are valid: true, expires at: 1766323857412
+[debug] [2025-12-21T12:32:21.085Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-12-21T12:32:21.085Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"LuminaryAuth_01","name":"Luminary"}
+[debug] [2025-12-21T12:32:22.569Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2025-12-21T12:32:22.570Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [project_id contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2025-12-21T12:32:22.718Z] FirebaseError: Request to https://cloudresourcemanager.googleapis.com/v1/projects had HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+    at responseToError (C:\Users\PRATHMESH KADAM\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:53:12)
+    at RetryOperation._fn (C:\Users\PRATHMESH KADAM\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:322:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
