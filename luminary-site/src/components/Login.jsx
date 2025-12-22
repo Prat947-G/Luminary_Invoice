@@ -8,7 +8,7 @@ import toast from 'react-hot-toast';
 // --- 🔒 THE VIP GUEST LIST ---
 // ADD YOUR EXACT GMAIL ADDRESSES HERE
 const AUTHORIZED_EMAILS = [
-  "prathmesh.kadam0524@gmail.com", // REPLACE THIS
+  "prathmeshkadam0524@gmail.com", // REPLACE THIS
   "jyotikadam2207@gmail.com" // REPLACE THIS
 ];
 

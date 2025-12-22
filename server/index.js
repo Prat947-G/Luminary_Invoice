@@ -17,10 +17,10 @@ const upload = multer({ dest: 'uploads/' });
 const parseInvoiceText = (text) => {
     // 1. Find Date (DD/MM/YYYY or similar)
     const dateMatch = text.match(/(\d{1,2}[\/\-\.]\d{1,2}[\/\-\.]\d{2,4})/);
-    
+
     // 2. Find Vehicle Number (Standard Indian format like MH12FZ9334)
     const vehicleMatch = text.match(/([A-Z]{2}[ -]?[0-9]{1,2}[ -]?[A-Z]{1,2}[ -]?[0-9]{4})/i);
-    
+
     // 3. Find Quantity (Looks for numbers followed by KG, Ton, etc.)
     // Matches: "15,920 KG", "1 Ton", "2890 kg"
     const qtyMatch = text.match(/(\d{1,3}(?:,\d{3})*(?:\.\d+)?)\s*(KG|TON|MT|Kg)/i);
@@ -91,5 +91,5 @@ app.post('/api/extract', upload.single('file'), async (req, res) => {
     }
 });
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`✅ Invoice Backend running on http://127.0.0.1:${PORT}`));
