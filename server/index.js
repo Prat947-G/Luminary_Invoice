@@ -13,6 +13,11 @@ app.use(cors({ origin: '*' }));
 // Upload Config
 const upload = multer({ dest: 'uploads/' });
 
+// --- Root Endpoint (Health Check) ---
+app.get('/', (req, res) => {
+    res.send('✅ Luminary Invoice Backend is Running!');
+});
+
 // --- Helper: Regex Data Extraction Strategy ---
 const parseInvoiceText = (text) => {
     // 1. Find Date (DD/MM/YYYY or similar)
