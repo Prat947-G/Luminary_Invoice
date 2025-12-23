@@ -48,6 +48,10 @@
     "rc-color-picker": {
       "react": "$react",
       "react-dom": "$react-dom"
+    },
+    "virtualizedtableforantd4": {
+      "react": "$react",
+      "react-dom": "$react-dom"
     }
   }
 }
